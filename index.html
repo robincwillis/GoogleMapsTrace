@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Maps Trace</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="src/css/main.css">
+
+<body>
+	<div id="map-canvas"></div>
+	<div id="controls">
+		<div class="toggle">
+			<span class="expand">+</span>
+			<span class="collapse">-</span>
+		</div>
+		<h2>Google Maps Trace</h2>
+		<form>
+		<!-- File -->
+		<label for="file">Image Overlay</label>
+		<input id="image-url" type="text" name="file">
+		<input type="button" id="file-btn" value="GO" />
+	</form>
+	<form>
+		<!-- Center -->
+		<div class="col">
+		<label for="center">Map Center Lat</label>
+
+		<input type="text" name="center-lat" id="center-lat">
+</div>
+<div class="col right">
+
+		<label for="center">Map Center Lng</label>
+
+		<input type="text" name="center-lng" id="center-lng">
+</div>
+		<input type="button" id="overlay-btn" value="Update" />
+		<!-- Corner 1 -->
+
+		<label for="corner1">Image NE Bounds</label>
+		<input type="text" name="ne-corner" id="ne-corner">
+
+		<!-- Corner 2 -->
+		<label for="center">Image SW Bounds</label>
+		<input type="text" name="sw-corner" id="sw-corner">
+
+
+		<!-- TODO: Opacity -->
+	</form>
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+<script type="text/javascript" src="src/js/main.js"></script>
+
+</body>
+</html>
